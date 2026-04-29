@@ -1,0 +1,43 @@
+# Xcode
+.DS_Store
+*.xcuserstate
+xcuserdata/
+.build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Swift Package Manager
+.build/
+*.resolved
+
+# Firebase - IMPORTANT: Never commit real credentials
+ScoutHQ/Resources/GoogleService-Info.plist
+
+# Environment
+.env
+*.env.local
+.env.development.local
+
+# Secrets
+Secrets.swift
+APIKeys.swift
+
+# CocoaPods (if used)
+Pods/
+Podfile.lock
+
+# Build artifacts
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# OS files
+.DS_Store
+Thumbs.db
