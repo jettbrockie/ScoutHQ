@@ -220,7 +220,7 @@ struct ReportCard: View {
     var compact = false
 
     var userVote: VoteType? {
-        report.userVotes[currentUserId].flatMap { VoteType(rawValue: $0) }
+        report.userVotes[currentUserId]
     }
 
     var body: some View {
