@@ -81,7 +81,7 @@ final class PlayerViewModel: ObservableObject {
             // Update local state optimistically
             if let index = reports.firstIndex(where: { $0.id == reportId }) {
                 var updated = reports[index]
-                let existingVote = updated.userVotes[userId].flatMap { VoteType(rawValue: $0) }
+                let existingVote = updated.userVotes[userId]
                 if existingVote == vote {
                     updated.userVotes.removeValue(forKey: userId)
                     if vote == .up { updated.upvotes -= 1 } else { updated.downvotes -= 1 }
@@ -89,7 +89,7 @@ final class PlayerViewModel: ObservableObject {
                     if let existing = existingVote {
                         if existing == .up { updated.upvotes -= 1 } else { updated.downvotes -= 1 }
                     }
-                    updated.userVotes[userId] = vote.rawValue
+                    updated.userVotes[userId] = vote
                     if vote == .up { updated.upvotes += 1 } else { updated.downvotes += 1 }
                 }
                 reports[index] = updated
