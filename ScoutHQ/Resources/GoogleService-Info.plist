@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  IMPORTANT: Replace this placeholder file with your actual GoogleService-Info.plist
+  downloaded from the Firebase Console (https://console.firebase.google.com).
+
+  Steps:
+  1. Go to Firebase Console
+  2. Create a new iOS project named "ScoutHQ"
+  3. Enter your app's Bundle ID (e.g., com.yourname.scouthq)
+  4. Download the GoogleService-Info.plist
+  5. Replace this file with the downloaded one
+
+  DO NOT commit your actual GoogleService-Info.plist to source control.
+  Add it to .gitignore.
+-->
+<plist version="1.0">
+<dict>
+    <key>CLIENT_ID</key>
+    <string>REPLACE_WITH_YOUR_CLIENT_ID</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>REPLACE_WITH_YOUR_REVERSED_CLIENT_ID</string>
+    <key>API_KEY</key>
+    <string>REPLACE_WITH_YOUR_API_KEY</string>
+    <key>GCM_SENDER_ID</key>
+    <string>REPLACE_WITH_YOUR_GCM_SENDER_ID</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>com.yourname.scouthq</string>
+    <key>PROJECT_ID</key>
+    <string>scouthq-XXXXX</string>
+    <key>STORAGE_BUCKET</key>
+    <string>scouthq-XXXXX.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false/>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false/>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true/>
+    <key>IS_GCM_ENABLED</key>
+    <true/>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true/>
+    <key>GOOGLE_APP_ID</key>
+    <string>REPLACE_WITH_YOUR_GOOGLE_APP_ID</string>
+</dict>
+</plist>

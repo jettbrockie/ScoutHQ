@@ -11,8 +11,8 @@ DerivedData/
 .build/
 *.resolved
 
-# Firebase - IMPORTANT: Never commit real credentials
-ScoutHQ/Resources/GoogleService-Info.plist
+# Firebase - Replace placeholder with your real GoogleService-Info.plist (do not commit real credentials)
+# ScoutHQ/Resources/GoogleService-Info.plist
 
 # Environment
 .env
