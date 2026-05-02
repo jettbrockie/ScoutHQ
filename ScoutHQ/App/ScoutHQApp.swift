@@ -4,8 +4,16 @@ import GoogleSignIn
 
 @main
 struct ScoutHQApp: App {
+#if os(iOS)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+#endif
     @StateObject private var authService = AuthService.shared
+
+    init() {
+#if !os(iOS)
+        FirebaseApp.configure()
+#endif
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -16,6 +24,7 @@ struct ScoutHQApp: App {
     }
 }
 
+#if os(iOS)
 // MARK: - App Delegate
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(
@@ -34,6 +43,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return GIDSignIn.sharedInstance.handle(url)
     }
 }
+#endif
 
 // MARK: - Root View
 struct RootView: View {
