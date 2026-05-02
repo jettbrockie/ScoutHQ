@@ -159,11 +159,11 @@ final class RankingService {
     private func calculateWeightedRating(reports: [ScoutingReport]) -> Double {
         guard !reports.isEmpty else { return 0 }
 
-        let totalWeight = reports.map { max(1.0, $0.userReputation / 100.0) }.reduce(0, +)
+        let totalWeight = reports.map { max(1.0, $0.userReputation / 100.0) }.reduce(0.0, +)
         let weightedSum = reports.map { report in
             let weight = max(1.0, report.userReputation / 100.0)
             return report.rating * weight
-        }.reduce(0, +)
+        }.reduce(0.0, +)
 
         return (weightedSum / totalWeight).rounded(to: 1)
     }
