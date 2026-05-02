@@ -4,8 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ScoutHQ",
     platforms: [
-        .iOS(.v17),
-        .macOS(.v13)
+        .iOS(.v17)
     ],
     dependencies: [
         .package(

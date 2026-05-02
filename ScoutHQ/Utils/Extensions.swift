@@ -1,8 +1,5 @@
 import SwiftUI
 import Foundation
-#if canImport(UIKit)
-import UIKit
-#endif
 
 // MARK: - Double Extensions
 extension Double {
@@ -66,7 +63,6 @@ extension Date {
 
 // MARK: - View Extensions
 extension View {
-#if canImport(UIKit)
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
@@ -74,7 +70,6 @@ extension View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
-#endif
 
     @ViewBuilder
     func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
@@ -87,7 +82,6 @@ extension View {
 }
 
 // MARK: - Custom Shapes
-#if canImport(UIKit)
 struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
@@ -101,7 +95,6 @@ struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
-#endif
 
 // MARK: - Color Extensions
 extension Color {
@@ -161,7 +154,6 @@ extension Binding where Value == String {
 }
 
 // MARK: - Haptic Feedback
-#if canImport(UIKit)
 struct HapticFeedback {
     static func impact(_ style: UIImpactFeedbackGenerator.FeedbackStyle = .medium) {
         let generator = UIImpactFeedbackGenerator(style: style)
@@ -178,4 +170,3 @@ struct HapticFeedback {
         generator.selectionChanged()
     }
 }
-#endif

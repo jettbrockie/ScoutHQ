@@ -95,7 +95,7 @@ struct AuthContainerView: View {
                 text: $viewModel.email,
                 placeholder: "Email",
                 icon: "envelope.fill",
-                isEmailField: true,
+                keyboardType: .emailAddress,
                 isValid: viewModel.email.isEmpty || viewModel.isEmailValid,
                 errorMessage: "Enter a valid email address"
             )
@@ -227,7 +227,7 @@ struct AuthTextField: View {
     @Binding var text: String
     var placeholder: String
     var icon: String
-    var isEmailField: Bool = false
+    var keyboardType: UIKeyboardType = .default
     var isValid = true
     var errorMessage = ""
 
@@ -239,9 +239,7 @@ struct AuthTextField: View {
                     .foregroundColor(.secondary)
                     .frame(width: 20)
                 TextField(placeholder, text: $text)
-#if canImport(UIKit)
-                    .keyboardType(isEmailField ? .emailAddress : .default)
-#endif
+                    .keyboardType(keyboardType)
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
             }
