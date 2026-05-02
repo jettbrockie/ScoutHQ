@@ -147,7 +147,6 @@ final class RankingService {
 
         guard !reports.isEmpty else { return }
 
-        let avgRating = reports.map(\.rating).reduce(0, +) / Double(reports.count)
         let weightedRating = calculateWeightedRating(reports: reports)
 
         try await firestore.update(
@@ -231,7 +230,7 @@ final class ReportService {
         let db = FirestoreService.shared.db
         let reportRef = db.collection(Constants.Firestore.reportsCollection).document(reportId)
 
-        try await db.runTransaction { transaction, errorPointer in
+        _ = try await db.runTransaction { transaction, errorPointer in
             let reportDoc: DocumentSnapshot
             do {
                 reportDoc = try transaction.getDocument(reportRef)

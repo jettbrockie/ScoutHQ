@@ -159,8 +159,8 @@ final class AIService {
     // MARK: - Cache AI Report
     func cacheReport(_ report: AIScoutReport) async throws {
         let firestore = FirestoreService.shared
-        try await firestore.create(report, in: Constants.Firestore.aiReportsCollection,
-                                   id: report.playerId)
+        _ = try await firestore.create(report, in: Constants.Firestore.aiReportsCollection,
+                                       id: report.playerId)
     }
 
     func fetchCachedReport(playerId: String) async -> AIScoutReport? {
