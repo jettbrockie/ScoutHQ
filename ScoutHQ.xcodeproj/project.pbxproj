@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0B000000000000000000001 /* ScoutHQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000001 /* ScoutHQApp.swift */; };
+		A0B000000000000000000002 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000002 /* User.swift */; };
+		A0B000000000000000000003 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000003 /* Player.swift */; };
+		A0B000000000000000000004 /* ScoutingReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000004 /* ScoutingReport.swift */; };
+		A0B000000000000000000005 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000005 /* Ranking.swift */; };
+		A0B000000000000000000006 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000006 /* Theme.swift */; };
+		A0B000000000000000000007 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000007 /* Constants.swift */; };
+		A0B000000000000000000008 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000008 /* Extensions.swift */; };
+		A0B000000000000000000009 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000009 /* AuthService.swift */; };
+		A0B00000000000000000000A /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000000A /* FirestoreService.swift */; };
+		A0B00000000000000000000B /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000000B /* AIService.swift */; };
+		A0B00000000000000000000C /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000000C /* MockDataService.swift */; };
+		A0B00000000000000000000D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000000D /* AuthViewModel.swift */; };
+		A0B00000000000000000000E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000000E /* HomeViewModel.swift */; };
+		A0B00000000000000000000F /* RankingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000000F /* RankingsViewModel.swift */; };
+		A0B000000000000000000010 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000010 /* PlayerViewModel.swift */; };
+		A0B000000000000000000011 /* ScoutingReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000011 /* ScoutingReportViewModel.swift */; };
+		A0B000000000000000000012 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000012 /* ProfileViewModel.swift */; };
+		A0B000000000000000000013 /* AuthContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000013 /* AuthContainerView.swift */; };
+		A0B000000000000000000014 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000014 /* MainTabView.swift */; };
+		A0B000000000000000000015 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000015 /* HomeView.swift */; };
+		A0B000000000000000000016 /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000016 /* RankingsView.swift */; };
+		A0B000000000000000000017 /* PlayerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000017 /* PlayerProfileView.swift */; };
+		A0B000000000000000000018 /* AIScoutingReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000018 /* AIScoutingReportView.swift */; };
+		A0B000000000000000000019 /* UserReportsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F000000000000000000019 /* UserReportsListView.swift */; };
+		A0B00000000000000000001A /* SubmitReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000001A /* SubmitReportView.swift */; };
+		A0B00000000000000000001B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000001B /* ProfileView.swift */; };
+		A0B00000000000000000001C /* CommonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000001C /* CommonComponents.swift */; };
+		A0B00000000000000000001D /* PlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000001D /* PlayerCard.swift */; };
+		A0B00000000000000000001E /* RatingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000001E /* RatingSlider.swift */; };
+		A0B00000000000000000001F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0F00000000000000000001F /* GoogleService-Info.plist */; };
+		A0B000000000000000000020 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000001 /* FirebaseAuth */; };
+		A0B000000000000000000021 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000002 /* FirebaseFirestore */; };
+		A0B000000000000000000022 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000003 /* FirebaseFirestoreCombine-Community */; };
+		A0B000000000000000000023 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000004 /* FirebaseStorage */; };
+		A0B000000000000000000024 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000005 /* FirebaseAnalytics */; };
+		A0B000000000000000000025 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000006 /* FirebaseMessaging */; };
+		A0B000000000000000000026 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000007 /* GoogleSignIn */; };
+		A0B000000000000000000027 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A090000000000000000000008 /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A0F000000000000000000000 /* ScoutHQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutHQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F000000000000000000001 /* ScoutHQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutHQApp.swift; sourceTree = "<group>"; };
+		A0F000000000000000000002 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A0F000000000000000000003 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A0F000000000000000000004 /* ScoutingReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingReport.swift; sourceTree = "<group>"; };
+		A0F000000000000000000005 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		A0F000000000000000000006 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A0F000000000000000000007 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A0F000000000000000000008 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A0F000000000000000000009 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A0F00000000000000000000A /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		A0F00000000000000000000B /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		A0F00000000000000000000C /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		A0F00000000000000000000D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A0F00000000000000000000E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A0F00000000000000000000F /* RankingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewModel.swift; sourceTree = "<group>"; };
+		A0F000000000000000000010 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		A0F000000000000000000011 /* ScoutingReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingReportViewModel.swift; sourceTree = "<group>"; };
+		A0F000000000000000000012 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A0F000000000000000000013 /* AuthContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContainerView.swift; sourceTree = "<group>"; };
+		A0F000000000000000000014 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A0F000000000000000000015 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A0F000000000000000000016 /* RankingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsView.swift; sourceTree = "<group>"; };
+		A0F000000000000000000017 /* PlayerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileView.swift; sourceTree = "<group>"; };
+		A0F000000000000000000018 /* AIScoutingReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIScoutingReportView.swift; sourceTree = "<group>"; };
+		A0F000000000000000000019 /* UserReportsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReportsListView.swift; sourceTree = "<group>"; };
+		A0F00000000000000000001A /* SubmitReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportView.swift; sourceTree = "<group>"; };
+		A0F00000000000000000001B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A0F00000000000000000001C /* CommonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponents.swift; sourceTree = "<group>"; };
+		A0F00000000000000000001D /* PlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCard.swift; sourceTree = "<group>"; };
+		A0F00000000000000000001E /* RatingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSlider.swift; sourceTree = "<group>"; };
+		A0F00000000000000000001F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A040000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B000000000000000000020 /* FirebaseAuth in Frameworks */,
+				A0B000000000000000000021 /* FirebaseFirestore in Frameworks */,
+				A0B000000000000000000022 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				A0B000000000000000000023 /* FirebaseStorage in Frameworks */,
+				A0B000000000000000000024 /* FirebaseAnalytics in Frameworks */,
+				A0B000000000000000000025 /* FirebaseMessaging in Frameworks */,
+				A0B000000000000000000026 /* GoogleSignIn in Frameworks */,
+				A0B000000000000000000027 /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A060000000000000000000001 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				A060000000000000000000002 /* ScoutHQ */,
+				A060000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A060000000000000000000002 /* ScoutHQ */ = {
+			isa = PBXGroup;
+			children = (
+				A060000000000000000000004 /* App */,
+				A060000000000000000000005 /* Models */,
+				A060000000000000000000006 /* Utils */,
+				A060000000000000000000007 /* Services */,
+				A060000000000000000000008 /* ViewModels */,
+				A060000000000000000000009 /* Views */,
+				A060000000000000000000012 /* Resources */,
+			);
+			path = ScoutHQ;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000000 /* ScoutHQ.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000001 /* ScoutHQApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000002 /* User.swift */,
+				A0F000000000000000000003 /* Player.swift */,
+				A0F000000000000000000004 /* ScoutingReport.swift */,
+				A0F000000000000000000005 /* Ranking.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000006 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000006 /* Theme.swift */,
+				A0F000000000000000000007 /* Constants.swift */,
+				A0F000000000000000000008 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000009 /* AuthService.swift */,
+				A0F00000000000000000000A /* FirestoreService.swift */,
+				A0F00000000000000000000B /* AIService.swift */,
+				A0F00000000000000000000C /* MockDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000008 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A0F00000000000000000000D /* AuthViewModel.swift */,
+				A0F00000000000000000000E /* HomeViewModel.swift */,
+				A0F00000000000000000000F /* RankingsViewModel.swift */,
+				A0F000000000000000000010 /* PlayerViewModel.swift */,
+				A0F000000000000000000011 /* ScoutingReportViewModel.swift */,
+				A0F000000000000000000012 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A06000000000000000000000A /* Auth */,
+				A06000000000000000000000B /* Main */,
+				A06000000000000000000000C /* Home */,
+				A06000000000000000000000D /* Rankings */,
+				A06000000000000000000000E /* Players */,
+				A06000000000000000000000F /* ScoutingReport */,
+				A060000000000000000000010 /* Profile */,
+				A060000000000000000000011 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A06000000000000000000000A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000013 /* AuthContainerView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A06000000000000000000000B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000014 /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A06000000000000000000000C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000015 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A06000000000000000000000D /* Rankings */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000016 /* RankingsView.swift */,
+			);
+			path = Rankings;
+			sourceTree = "<group>";
+		};
+		A06000000000000000000000E /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				A0F000000000000000000017 /* PlayerProfileView.swift */,
+				A0F000000000000000000018 /* AIScoutingReportView.swift */,
+				A0F000000000000000000019 /* UserReportsListView.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		A06000000000000000000000F /* ScoutingReport */ = {
+			isa = PBXGroup;
+			children = (
+				A0F00000000000000000001A /* SubmitReportView.swift */,
+			);
+			path = ScoutingReport;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000010 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A0F00000000000000000001B /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000011 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0F00000000000000000001C /* CommonComponents.swift */,
+				A0F00000000000000000001D /* PlayerCard.swift */,
+				A0F00000000000000000001E /* RatingSlider.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A060000000000000000000012 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0F00000000000000000001F /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0A000000000000000000001 /* ScoutHQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C000000000000000000002 /* Build configuration list for PBXNativeTarget "ScoutHQ" */;
+			buildPhases = (
+				A040000000000000000000001 /* Sources */,
+				A040000000000000000000002 /* Frameworks */,
+				A040000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScoutHQ;
+			packageProductDependencies = (
+				A090000000000000000000001 /* FirebaseAuth */,
+				A090000000000000000000002 /* FirebaseFirestore */,
+				A090000000000000000000003 /* FirebaseFirestoreCombine-Community */,
+				A090000000000000000000004 /* FirebaseStorage */,
+				A090000000000000000000005 /* FirebaseAnalytics */,
+				A090000000000000000000006 /* FirebaseMessaging */,
+				A090000000000000000000007 /* GoogleSignIn */,
+				A090000000000000000000008 /* GoogleSignInSwift */,
+			);
+			productName = ScoutHQ;
+			productReference = A0F000000000000000000000 /* ScoutHQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0E000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A0A000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A0C000000000000000000001 /* Build configuration list for PBXProject "ScoutHQ" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A060000000000000000000001 /* root */;
+			packageReferences = (
+				A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A080000000000000000000002 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = A060000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0A000000000000000000001 /* ScoutHQ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A040000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B00000000000000000001F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A040000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B000000000000000000001 /* ScoutHQApp.swift in Sources */,
+				A0B000000000000000000002 /* User.swift in Sources */,
+				A0B000000000000000000003 /* Player.swift in Sources */,
+				A0B000000000000000000004 /* ScoutingReport.swift in Sources */,
+				A0B000000000000000000005 /* Ranking.swift in Sources */,
+				A0B000000000000000000006 /* Theme.swift in Sources */,
+				A0B000000000000000000007 /* Constants.swift in Sources */,
+				A0B000000000000000000008 /* Extensions.swift in Sources */,
+				A0B000000000000000000009 /* AuthService.swift in Sources */,
+				A0B00000000000000000000A /* FirestoreService.swift in Sources */,
+				A0B00000000000000000000B /* AIService.swift in Sources */,
+				A0B00000000000000000000C /* MockDataService.swift in Sources */,
+				A0B00000000000000000000D /* AuthViewModel.swift in Sources */,
+				A0B00000000000000000000E /* HomeViewModel.swift in Sources */,
+				A0B00000000000000000000F /* RankingsViewModel.swift in Sources */,
+				A0B000000000000000000010 /* PlayerViewModel.swift in Sources */,
+				A0B000000000000000000011 /* ScoutingReportViewModel.swift in Sources */,
+				A0B000000000000000000012 /* ProfileViewModel.swift in Sources */,
+				A0B000000000000000000013 /* AuthContainerView.swift in Sources */,
+				A0B000000000000000000014 /* MainTabView.swift in Sources */,
+				A0B000000000000000000015 /* HomeView.swift in Sources */,
+				A0B000000000000000000016 /* RankingsView.swift in Sources */,
+				A0B000000000000000000017 /* PlayerProfileView.swift in Sources */,
+				A0B000000000000000000018 /* AIScoutingReportView.swift in Sources */,
+				A0B000000000000000000019 /* UserReportsListView.swift in Sources */,
+				A0B00000000000000000001A /* SubmitReportView.swift in Sources */,
+				A0B00000000000000000001B /* ProfileView.swift in Sources */,
+				A0B00000000000000000001C /* CommonComponents.swift in Sources */,
+				A0B00000000000000000001D /* PlayerCard.swift in Sources */,
+				A0B00000000000000000001E /* RatingSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A050000000000000000000001 /* Debug (Project) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A050000000000000000000002 /* Release (Project) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A050000000000000000000003 /* Debug (Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ScoutHQ;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ScoutHQ needs camera access to upload player photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ScoutHQ needs photo library access to upload player photos.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scouthq.ScoutHQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A050000000000000000000004 /* Release (Target) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ScoutHQ;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ScoutHQ needs camera access to upload player photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ScoutHQ needs photo library access to upload player photos.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scouthq.ScoutHQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C000000000000000000001 /* Build configuration list for PBXProject "ScoutHQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A050000000000000000000001 /* Debug */,
+				A050000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C000000000000000000002 /* Build configuration list for PBXNativeTarget "ScoutHQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A050000000000000000000003 /* Debug */,
+				A050000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+		A080000000000000000000002 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A090000000000000000000001 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A090000000000000000000002 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A090000000000000000000003 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		A090000000000000000000004 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		A090000000000000000000005 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A090000000000000000000006 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		A090000000000000000000007 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000002 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		A090000000000000000000008 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A080000000000000000000002 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+	};
+	rootObject = A0E000000000000000000001 /* Project object */;
+}
