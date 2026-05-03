@@ -15,10 +15,16 @@ final class AuthService: ObservableObject {
     @Published var error: AuthError?
 
     private var authStateHandle: AuthStateDidChangeListenerHandle?
-    private let db = Firestore.firestore()
+    private lazy var db = Firestore.firestore()
+
+    private var isFirebaseConfigured: Bool {
+        FirebaseApp.app() != nil
+    }
 
     private init() {
-        setupAuthListener()
+        if isFirebaseConfigured {
+            setupAuthListener()
+        }
     }
 
     private func setupAuthListener() {
@@ -37,6 +43,7 @@ final class AuthService: ObservableObject {
     // MARK: - Email/Password Auth
 
     func signUp(email: String, password: String, username: String) async throws {
+        guard isFirebaseConfigured else { throw AuthError.firebaseNotConfigured }
         isLoading = true
         defer { isLoading = false }
 
@@ -65,23 +72,27 @@ final class AuthService: ObservableObject {
     }
 
     func signIn(email: String, password: String) async throws {
+        guard isFirebaseConfigured else { throw AuthError.firebaseNotConfigured }
         isLoading = true
         defer { isLoading = false }
         try await Auth.auth().signIn(withEmail: email, password: password)
     }
 
     func signOut() throws {
+        guard isFirebaseConfigured else { currentUser = nil; return }
         try Auth.auth().signOut()
         currentUser = nil
     }
 
     func resetPassword(email: String) async throws {
+        guard isFirebaseConfigured else { throw AuthError.firebaseNotConfigured }
         try await Auth.auth().sendPasswordReset(withEmail: email)
     }
 
     // MARK: - Google Sign In
 
     func signInWithGoogle() async throws {
+        guard isFirebaseConfigured else { throw AuthError.firebaseNotConfigured }
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let rootViewController = windowScene.windows.first?.rootViewController else {
             throw AuthError.unknown
@@ -135,6 +146,7 @@ final class AuthService: ObservableObject {
     }
 
     func signInWithApple(authorization: ASAuthorization) async throws {
+        guard isFirebaseConfigured else { throw AuthError.firebaseNotConfigured }
         guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential,
               let nonce = currentNonce,
               let appleIDToken = appleIDCredential.identityToken,
@@ -252,6 +264,7 @@ enum AuthError: LocalizedError {
     case usernameTaken
     case googleSignInFailed
     case appleSignInFailed
+    case firebaseNotConfigured
     case unknown
 
     var errorDescription: String? {
@@ -259,6 +272,7 @@ enum AuthError: LocalizedError {
         case .usernameTaken: return "That username is already taken. Please choose another."
         case .googleSignInFailed: return "Google sign-in failed. Please try again."
         case .appleSignInFailed: return "Apple sign-in failed. Please try again."
+        case .firebaseNotConfigured: return "Firebase is not configured. Please add your GoogleService-Info.plist."
         case .unknown: return "An unknown error occurred. Please try again."
         }
     }
