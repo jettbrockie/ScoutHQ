@@ -680,7 +680,7 @@ struct SuccessView: View {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 60))
                     .foregroundColor(.green)
-                    .symbolEffect(.bounce)
+                    .symbolEffect(.bounce, value: true)
             }
 
             VStack(spacing: ScoutSpacing.sm) {

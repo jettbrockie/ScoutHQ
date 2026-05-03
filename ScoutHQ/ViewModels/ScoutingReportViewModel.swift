@@ -91,7 +91,7 @@ final class ScoutingReportViewModel: ObservableObject {
             return
         }
 
-        searchTask = Task {
+        searchTask = Task { @MainActor in
             try? await Task.sleep(nanoseconds: 300_000_000) // 300ms debounce
             guard !Task.isCancelled else { return }
             isSearching = true
