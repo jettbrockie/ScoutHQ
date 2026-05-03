@@ -81,6 +81,7 @@
 		A0F00000000000000000001D /* PlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCard.swift; sourceTree = "<group>"; };
 		A0F00000000000000000001E /* RatingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSlider.swift; sourceTree = "<group>"; };
 		A0F00000000000000000001F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0F000000000000000000020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 		A060000000000000000000002 /* ScoutHQ */ = {
 			isa = PBXGroup;
 			children = (
+				A0F000000000000000000020 /* Info.plist */,
 				A060000000000000000000004 /* App */,
 				A060000000000000000000005 /* Models */,
 				A060000000000000000000006 /* Utils */,
@@ -513,18 +515,10 @@
 		A050000000000000000000003 /* Debug (Target) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ScoutHQ;
-				INFOPLIST_KEY_NSCameraUsageDescription = "ScoutHQ needs camera access to upload player photos.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ScoutHQ needs photo library access to upload player photos.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_FILE = ScoutHQ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,7 +528,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scouthq.ScoutHQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -543,18 +536,10 @@
 		A050000000000000000000004 /* Release (Target) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ScoutHQ;
-				INFOPLIST_KEY_NSCameraUsageDescription = "ScoutHQ needs camera access to upload player photos.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ScoutHQ needs photo library access to upload player photos.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_FILE = ScoutHQ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,7 +549,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scouthq.ScoutHQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
