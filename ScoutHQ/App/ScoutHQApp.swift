@@ -22,8 +22,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        FirebaseApp.configure()
+        configureFirebase()
         return true
+    }
+
+    private func configureFirebase() {
+        guard let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+              let plist = NSDictionary(contentsOfFile: path),
+              let googleAppID = plist["GOOGLE_APP_ID"] as? String,
+              !googleAppID.hasPrefix("REPLACE_"),
+              !googleAppID.isEmpty else {
+            print("ScoutHQ: Skipping Firebase — replace GoogleService-Info.plist with real credentials.")
+            return
+        }
+        FirebaseApp.configure()
     }
 
     func application(
